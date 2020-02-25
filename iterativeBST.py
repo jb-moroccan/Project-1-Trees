@@ -49,6 +49,10 @@ def deleteIter(root, val):
   if root == None:
     return None
 
+  if parent == None and root.left == None and root.right == None and val == root.val:
+    root.val = None
+    return root
+
   while val != current.val:
     parent = current
     if val > current.val:
