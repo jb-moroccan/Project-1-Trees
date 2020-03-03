@@ -7,7 +7,10 @@ Apologies for the lack of comments in most my code, I just wanted to get it work
 
 Parts 4-6 completed
 
-compareImplementations.py	Question 6 a, b, c	
+compareImplementations.py	Question 6 a, b, c
+
 constructingTrees.py	Question 5 a & c
+
 extraCreditTime.py	Question 7 a - extra credit
+
 iterativeAVLTree.py	Question 4 
