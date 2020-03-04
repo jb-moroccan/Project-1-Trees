@@ -222,32 +222,32 @@ class AVL_Tree:
       prevNode = nextPop
 
     return prevNode
-
+  
   def leftRotate(self, node): 
 
-    y = node.right 
-    x = y.left 
+    rightSub = node.right 
+    leftRightSub = rightSub.left 
+    rightSub.left = node 
+    node.right = leftRightSub
 
-    y.left = node 
-    node.right = x 
-
+    #update heights after rotation
     node.height = 1 + max(self.getHeight(node.left), self.getHeight(node.right)) 
-    y.height = 1 + max(self.getHeight(y.left), self.getHeight(y.right)) 
+    rightSub.height = 1 + max(self.getHeight(rightSub.left), self.getHeight(rightSub.right)) 
 
-    return y 
+    return rightSub
 
   def rightRotate(self, node): 
 
-    y = node.left 
-    x = y.right 
+    leftSub = node.left 
+    rightLeftSub = leftSub.right 
+    leftSub.right = node 
+    node.left = rightLeftSub
 
-    y.right = node 
-    node.left = x 
-
+    #update heights after rotation
     node.height = 1 + max(self.getHeight(node.left), self.getHeight(node.right)) 
-    y.height = 1 + max(self.getHeight(y.left), self.getHeight(y.right)) 
+    leftSub.height = 1 + max(self.getHeight(leftSub.left), self.getHeight(leftSub.right)) 
 
-    return y 
+    return leftSub
 
   def getHeight(self, root): 
     if root: 
