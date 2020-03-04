@@ -11,6 +11,10 @@ compareImplementations.py	Question 6 a, b, c
 
 constructingTrees.py	Question 5 a & c
 
+iterativeAVLTree.py	Question 4 
+
+Part 7 completed
+
 extraCreditTime.py	Question 7 a - extra credit
 
-iterativeAVLTree.py	Question 4 
+avlTreeRecursive - Extra credit
